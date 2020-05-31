@@ -16,4 +16,8 @@ export class AppComponent {
   decrement() {
     this.counter--;
   }
+
+  externalIncrement() {
+    window.dispatchEvent(new CustomEvent('increment', {detail: 'angular'}));
+  }
 }
