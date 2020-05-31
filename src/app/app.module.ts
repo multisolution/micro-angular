@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {createCustomElement} from "@angular/elements";
+import {APP_BASE_HREF} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import {createCustomElement} from "@angular/elements";
     MatButtonModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [
+    {provide: APP_BASE_HREF, useValue: '/micro-angular'}
+  ],
   bootstrap: [AppComponent]
 })
 
