@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'micro-angular',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -19,5 +19,6 @@ export class AppComponent {
 
   externalIncrement() {
     window.dispatchEvent(new CustomEvent('increment', {detail: 'angular'}));
+    window.postMessage('increment', '*');
   }
 }
